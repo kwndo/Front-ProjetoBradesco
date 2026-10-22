@@ -197,9 +197,8 @@ export function BensForm({ onSuccessCadastroBem }) {
                   <span className="type-title">Imóvel</span>
                   <span className="type-desc">Casas, apartamentos, terrenos ou comercial</span>
                 </div>
-                <div className="type-tag">Financiamento até 80%</div>
+                <div className="type-tag">Financiamento até 90%</div>
               </div>
-
               {/* Card Outros Bens */}
               <div
                 role="radio"
@@ -226,7 +225,7 @@ export function BensForm({ onSuccessCadastroBem }) {
                   <span className="type-title">Outros Bens</span>
                   <span className="type-desc">Máquinas agrícolas, embarcações e equipamentos</span>
                 </div>
-                <div className="type-tag">Financiamento até 75%</div>
+                <div className="type-tag">Financiamento até 90%</div>
               </div>
             </div>
           </div>
@@ -253,8 +252,8 @@ export function BensForm({ onSuccessCadastroBem }) {
                       tipoBem === 'veiculo'
                         ? 'Ex: Toyota Corolla Altis 2.0 Flex Automático 2024'
                         : tipoBem === 'imovel'
-                        ? 'Ex: Apartamento 3 quartos 85m² - Vila Mariana, São Paulo/SP'
-                        : 'Ex: Trator Agrícola John Deere 5078E 2023'
+                          ? 'Ex: Apartamento 3 quartos 85m² - Vila Mariana, São Paulo/SP'
+                          : 'Ex: Trator Agrícola John Deere 5078E 2023'
                     }
                     value={descricao}
                     onChange={(e) => {
@@ -272,8 +271,8 @@ export function BensForm({ onSuccessCadastroBem }) {
                   {tipoBem === 'veiculo'
                     ? 'Placa ou Chassi do Veículo'
                     : tipoBem === 'imovel'
-                    ? 'Matrícula no Cartório de Imóveis'
-                    : 'Nº de Série ou Nota Fiscal'}
+                      ? 'Matrícula no Cartório de Imóveis'
+                      : 'Nº de Série ou Nota Fiscal'}
                 </label>
                 <div className="input-with-icon">
                   <ShieldCheck size={18} className="input-icon" />
@@ -285,8 +284,8 @@ export function BensForm({ onSuccessCadastroBem }) {
                       tipoBem === 'veiculo'
                         ? 'Ex: ABC-1D23 ou 9BW...'
                         : tipoBem === 'imovel'
-                        ? 'Ex: Matrícula nº 142.890 (2º RI)'
-                        : 'Ex: SN-849201948'
+                          ? 'Ex: Matrícula nº 142.890 (2º RI)'
+                          : 'Ex: SN-849201948'
                     }
                     value={identificacao}
                     onChange={(e) => setIdentificacao(e.target.value)}
@@ -356,13 +355,6 @@ export function BensForm({ onSuccessCadastroBem }) {
               )}
             </button>
           </div>
-
-          <div className="form-security-footer">
-            <CheckCircle2 size={15} className="security-icon" />
-            <span>
-              Garantia vinculada ao seu perfil • Dados criptografados e em conformidade com as normas do Banco Central do Brasil.
-            </span>
-          </div>
         </div>
 
         {/* COLUNA DIREITA: PAINEL DE RESUMO E BENEFÍCIOS */}
@@ -373,7 +365,6 @@ export function BensForm({ onSuccessCadastroBem }) {
                 <Award size={15} />
                 <span>Resumo da Garantia</span>
               </div>
-              <span className="preview-segment-tag">Prime</span>
             </div>
 
             <div className="preview-bem-highlight">
@@ -417,33 +408,12 @@ export function BensForm({ onSuccessCadastroBem }) {
                 <strong className="metric-value highlight-green">
                   {estimatedFinanciamento > 0
                     ? estimatedFinanciamento.toLocaleString('pt-BR', {
-                        style: 'currency',
-                        currency: 'BRL',
-                      })
+                      style: 'currency',
+                      currency: 'BRL',
+                    })
                     : 'R$ 0,00'}
                 </strong>
               </div>
-            </div>
-
-            {/* Vantagens Institucionais Bradesco */}
-            <div className="preview-advantages-box">
-              <div className="advantage-item">
-                <CheckCircle2 size={15} className="advantage-icon" />
-                <span>Taxas personalizadas a partir de 1,09% ao mês</span>
-              </div>
-              <div className="advantage-item">
-                <Clock size={15} className="advantage-icon" />
-                <span>Análise de crédito imediata com resposta no app</span>
-              </div>
-              <div className="advantage-item">
-                <ShieldCheck size={15} className="advantage-icon" />
-                <span>Prazos flexíveis de 12 até 60 parcelas fixas</span>
-              </div>
-            </div>
-
-            <div className="preview-help-box">
-              <HelpCircle size={15} className="help-icon" />
-              <span>Precisa de auxílio na avaliação? Consulte seu Gerente Bradesco Prime.</span>
             </div>
           </div>
         </aside>
