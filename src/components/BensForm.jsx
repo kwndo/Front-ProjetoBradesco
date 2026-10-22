@@ -6,13 +6,10 @@ import {
   DollarSign,
   FileText,
   ArrowRight,
-  CheckCircle2,
   Sparkles,
   ShieldCheck,
   Check,
   Award,
-  Clock,
-  HelpCircle,
 } from 'lucide-react';
 
 export function BensForm({ onSuccessCadastroBem }) {
